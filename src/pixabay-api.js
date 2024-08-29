@@ -1,10 +1,8 @@
-import iziToast from "izitoast";
-
 const BASE_URL = 'https://pixabay.com/api/';
 
 export const fetchPhotos = searchedPhotos => {
     const urlParams = new URLSearchParams({
-        key: '',
+        key: '45683137-9da9ef345b4290ae910ded200',
         q: searchedPhotos,
         image_type: 'photo',
         orientation: 'horizontal',
@@ -21,3 +19,4 @@ export const fetchPhotos = searchedPhotos => {
         });
 };
 
+//element.classList.toggle(className)
