@@ -4,8 +4,8 @@ import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from "simplelightbox";
 import "simplelightbox/dist/simple-lightbox.min.css";
 
-import { fetchPhotos } from "./pixabay-api";
-import { createGalleryCardTemplate } from "./render-functions";
+import { fetchPhotos } from "./js/pixabay-api";
+import { createGalleryCardTemplate } from "./js/render-functions";
 
 const searchForm = document.querySelector('.js-search-form');
 const galleryEl = document.querySelector('.js-gallery');
