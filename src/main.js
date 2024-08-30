@@ -11,6 +11,13 @@ const searchForm = document.querySelector('.js-search-form');
 const galleryEl = document.querySelector('.js-gallery');
 const loaderEl = document.querySelector('.loader');
 
+
+const lightbox = new SimpleLightbox('.gallery a', {
+                captions: true, 
+                captionDelay: 250, 
+                captionPosition: 'bottom',
+});
+            
 const onSearchSubmit = event => {
     event.preventDefault();
     const searchedValue = searchForm.elements.user_query.value;
@@ -27,7 +34,7 @@ const onSearchSubmit = event => {
                 });
 
                 galleryEl.innerHTML = '';
-                searchForm.reset();
+                
 
                 return;
             };
@@ -36,16 +43,16 @@ const onSearchSubmit = event => {
 
             galleryEl.innerHTML = galleryCardsTemplate;
 
-            var lightbox = new SimpleLightbox('.gallery a', {
-                captions: true, 
-                captionDelay: 250, 
-                captionsData: 'alt', 
-                captionPosition: 'bottom',
-            });
             lightbox.refresh();
         })
         .catch(err => {
-            console.log(err);
+            iziToast.error({
+                    message: err,
+                    position: 'topRight',
+                });
+        })
+        .finally(() => {
+            searchForm.reset();
         });
     
 };

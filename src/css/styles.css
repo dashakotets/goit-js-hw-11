@@ -89,6 +89,20 @@ a {
   object-fit: cover;
 }
 
+.card-info{
+  font-size: 14px;
+}
+
+.info-text{
+  display: inline-flex;
+  gap: 4px;
+}
+.info{
+display: inline-flex;
+  gap: 6px;
+}
+
+
 .loader {
   width: 48px;
   height: 48px;

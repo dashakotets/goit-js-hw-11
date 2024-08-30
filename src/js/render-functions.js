@@ -9,5 +9,18 @@
 export const createGalleryCardTemplate = card => {
     return `<div class="gallery-card">
     <a href="${card.largeImageURL}"><img src="${card.previewURL}" alt="" title="" class="gallery-img"/></a>
-</div>`;
+    <div class="card-info">
+    <ul class="info-text">
+    <li>Likes</li>
+    <li>Views</li>
+    <li>Comments</li>
+    <li>Downloads</li>
+    </ul>
+    <ul class="info">
+    <li>${card.likes}</li>
+    <li>${card.views}</li>
+    <li>${card.comments}</li>
+    <li>${card.downloads}</li>
+    </ul>
+</div></div>`;
 };
