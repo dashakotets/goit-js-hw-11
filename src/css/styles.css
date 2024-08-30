@@ -94,13 +94,10 @@ a {
 }
 
 .info-text{
-  display: inline-flex;
+  display: flex;
   gap: 4px;
 }
-.info{
-display: inline-flex;
-  gap: 6px;
-}
+
 
 
 .loader {
